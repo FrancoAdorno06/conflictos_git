@@ -30,5 +30,9 @@ def validar_nombre(nombre:str):
 def validar_email(email:str):
     """
     Valida que email sea un correo válido"""
-    # Completar
-    return True
+    # Definimos el patrón exacto que debe tener un email
+    patron = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+    
+    # re.fullmatch busca que TODO el email coincida con el patrón.
+    # Si coincide devuelve un objeto, si falla devuelve None.
+    return re.fullmatch(patron, email) is not None
