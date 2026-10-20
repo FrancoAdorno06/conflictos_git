@@ -10,7 +10,7 @@ def validar_nombre(nombre:str):
     """
     Valida que nombre sea no nulo y que solo caracteres"""
     # Franco Adorno
-    if nombre is None or not instance(nombre, str):
+    if nombre is None or not isinstance(nombre, str):
         return False
     nombre = nombre.strip()
     if not nombre:
