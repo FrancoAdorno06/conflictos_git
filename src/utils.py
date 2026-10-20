@@ -9,7 +9,14 @@ def validar_id_usuario(id_usuario:str):
 def validar_nombre(nombre:str):
     """
     Valida que nombre sea no nulo y que solo caracteres"""
-    # Completar
+    # Franco Adorno
+    if nombre is None or not instance(nombre, str):
+        return False
+    nombre = nombre.strip()
+    if not nombre:
+        return False
+
+    return all(c.isalpha()or c == "" for c in nombre)
     return True
 
 def validar_email(email:str):
